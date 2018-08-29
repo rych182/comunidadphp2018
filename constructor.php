@@ -1,66 +1,97 @@
 <?php
 
-class nombres
+class ClaseEquis 
 {
-	public function mostrar($variable)
+	public $nombre = "";
+	public function modificar($var)
 	{
-		echo "Mi nombre es: " . $variable;
+		$this->nombre=$var;
 	}
-}
+	public function mostrar()
+	{
+		echo "Mi nombre es " . $this->nombre . "<br>";
+	}
 
+}
 class html
 {
-	public function parrafo1()
+	public function parrafo()
 	{
 		echo "<p>";
 	}
-	public function parrafo2()
+	public function parrafo1()
 	{
 		echo "</p>";
 	}
-	public function h1()
+	public function acheUno()
 	{
 		echo "<h1>";
 	}
-	public function h2()
+	public function acheUno1()
 	{
 		echo "</h1>";
 	}
-	public function negritasItalica1()
-	{
-		echo "<strong><i>";
-	}
-	public function negritasItalica2()
-	{
-		echo "</strong></i>";
-	}
-
 }
 
-$objeto = new nombres();
-$objeto2 = new nombres();
-$objeto3 = new nombres();
-$objeto4 = new nombres();
-$objeto5 = new nombres();
+
+
+$objeto1 = new ClaseEquis();
+$objeto2 = new ClaseEquis();
+$objeto3 = new ClaseEquis();
+$objeto4 = new ClaseEquis();
+$objeto5 = new ClaseEquis();
 $objeto6 = new html();
 
+
+$objeto1->modificar("Sutano");
+$objeto6->parrafo();
+$objeto1->mostrar();
 $objeto6->parrafo1();
-$objeto->mostrar("Ricardo, y me gusta PHP<br>");
-$objeto6->parrafo2();
 
-$objeto6->h1();
-$objeto2->mostrar("Ricardo, y quiero dominar PHP con POO<br>");
-$objeto6->h2();
 
-$objeto6->negritasItalica1();
-$objeto3->mostrar("Ricardo, quiero aprender Laravel y Angular para tener un buen trabajo<br>");
-$objeto6->negritasItalica2();
+$objeto2->modificar("Mengano");
+$objeto6->acheUno();
+$objeto2->mostrar();
+$objeto6->acheUno1();
 
+$objeto3->modificar("Perenganos");
+$objeto3->mostrar();
+
+
+$objeto4->modificar("Britany");
+$objeto6->acheUno();
+$objeto4->mostrar();
+$objeto6->acheUno1();
+
+
+$objeto5->modificar("Roberto");
+$objeto6->parrafo();
+$objeto5->mostrar();
 $objeto6->parrafo1();
-$objeto4->mostrar("Ricardo, y quiero dominar muchos frameworks y CMS's de PHP<br> ");
-$objeto6->parrafo2();
 
-$objeto5->mostrar("Ricardo, y quiero ser un buen FullStack<br>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -174,13 +205,13 @@ $miObjeto->mostrar();
 */
 
 //**********COSAS POR PRACTICAS******************
-//oBJETO conb constructor LISTO
-//objeto modificado desde afuera LISTO
-//Cambiando mi apodo cuando está protegido  LISTO
-//Imprimiendo un objeto con 3 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra LISTO.  
-//Cambiar PROPIEDAD PRIVADA desde afuera y con variable dentro del metodo  LISTO
-//Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto LISTO 
-//Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa . 
+//1)oBJETO conb constructor LISTO
+//2)objeto modificado desde afuera LISTO
+//3)Cambiando mi apodo cuando está protegido LISTO  
+//4)Imprimiendo un objeto con 3 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra .  LISTO
+//5)Cambiar PROPIEDAD PRIVADA desde afuera y con variable dentro del metodo LISTO
+//6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto  LISTO
+//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa. 
 
 
 
