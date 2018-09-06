@@ -1,79 +1,56 @@
 <?php
 
-class ClaseEquis 
+
+class nombres
 {
-	public $nombre = "";
-	public function modificar($var)
+	public function nombre($value)
 	{
-		$this->nombre=$var;
-	}
-	public function mostrar()
-	{
-		echo "Mi nombre es " . $this->nombre . "<br>";
+		echo $value;
 	}
 
-}
-class html
-{
-	public function parrafo()
+	public function p1()
 	{
 		echo "<p>";
 	}
-	public function parrafo1()
+	public function p2()
 	{
 		echo "</p>";
 	}
-	public function acheUno()
+	public function h1()
 	{
 		echo "<h1>";
 	}
-	public function acheUno1()
+		public function h2()
 	{
 		echo "</h1>";
 	}
 }
+$objeto1 = new nombres();
+$objeto2 = new nombres();
+$objeto3 = new nombres();
+$objeto4 = new nombres();
+$objeto5 = new nombres();
+$objeto6 = new nombres();
 
 
+$objeto6->p1();
+$objeto1->nombre("Ricardo<br>");
+$objeto6->p2();
 
-$objeto1 = new ClaseEquis();
-$objeto2 = new ClaseEquis();
-$objeto3 = new ClaseEquis();
-$objeto4 = new ClaseEquis();
-$objeto5 = new ClaseEquis();
-$objeto6 = new html();
+$objeto6->h1();
+$objeto2->nombre("Rafael<br>");
+$objeto6->h2();
 
-
-$objeto1->modificar("Sutano");
-$objeto6->parrafo();
-$objeto1->mostrar();
-$objeto6->parrafo1();
+$objeto6->p1();
+$objeto3->nombre("Francisco<br>");
+$objeto6->p2();
 
 
-$objeto2->modificar("Mengano");
-$objeto6->acheUno();
-$objeto2->mostrar();
-$objeto6->acheUno1();
+$objeto6->p1();
+$objeto4->nombre("Sutano<br>");
+$objeto6->p2();
 
-$objeto3->modificar("Perenganos");
-$objeto3->mostrar();
-
-
-$objeto4->modificar("Britany");
-$objeto6->acheUno();
-$objeto4->mostrar();
-$objeto6->acheUno1();
-
-
-$objeto5->modificar("Roberto");
-$objeto6->parrafo();
-$objeto5->mostrar();
-$objeto6->parrafo1();
-
-
-
-
-
-
+$objeto5->nombre("Mengano<br>");
 
 
 
@@ -206,12 +183,12 @@ $miObjeto->mostrar();
 
 //**********COSAS POR PRACTICAS******************
 //1)oBJETO conb constructor LISTO
-//2)objeto modificado desde afuera LISTO
-//3)Cambiando mi apodo cuando está protegido LISTO  
-//4)Imprimiendo un objeto con 3 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra .  LISTO
+//2)objeto modificado desde afuera  LISTO
+//3)Cambiando mi apodo cuando está protegido LISTO   
+//4)Imprimiendo un objeto con 3 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra . LISTO  
 //5)Cambiar PROPIEDAD PRIVADA desde afuera y con variable dentro del metodo LISTO
 //6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto  LISTO
-//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa. 
+//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa. LISTO
 
 
 

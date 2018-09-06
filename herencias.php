@@ -1,5 +1,42 @@
 <?php 
 
+class operacionesMatematicas
+{
+	public function metodo($operacion,$numeros)
+	{
+			$caja = count($numeros);
+			$resultado = 0;
+		switch ($operacion) {
+			case 'suma':
+				for ($i=0; $i < $caja; $i++) {
+					$resultado += $numeros[$i]; 
+				}
+				break;
+			case 'resta':
+				for ($i=0; $i < $caja; $i++) {
+					$resultado -= $numeros[$i]; 
+				}
+				break;
+			case 'multiplicacion':
+				$resultado = $numeros[0];
+				for ($i=0; $i < $caja; $i++) {
+					$resultado *= $numeros[$i];
+				}
+				break;
+			case 'division':
+				$resultado = $numeros[0];
+				for ($i=0; $i < $caja; $i++) {
+					$resultado /= $numeros[$i];
+				}
+				break;
+		}
+		return $resultado;
+	}
+}
+
+$numeros = array(1,2,3,4);
+$objeto = new operacionesMatematicas();
+echo $objeto->metodo("division",$numeros);
 
 
 
@@ -24,11 +61,34 @@
 
 
 
+/*
+FOREACH con array ASOCIATIIVO
 
 
+class operacionesMatematicas
+{
+	public function metodo($operacion,$numeros)
+	{
+		$caja = count($numeros);
+		$resultado = 0;
+		switch ($operacion) {
+			case 'suma':
+				foreach ($numeros as $key => $value) {
+					echo "El valor de resultado es $resultado . El valor del INDICE es: $key y el VALOR del indice que se le sumara a la variable resultado es $value <br>";
+					$resultado += $value;
+				}
+				break;
+		}
+		return $resultado;
+	}
+}
+
+$numeros = array("uno"=>1,"dos"=>2,"tres"=>3,"cuatro"=>4,"cinco"=>5);
+$objeto = new operacionesMatematicas();
+echo $objeto->metodo("suma",$numeros)
 
 
-
+*/
 
 
 
@@ -58,6 +118,91 @@ echo "El valor es: " . $objeto->visualizar($datos,"suma");
 */
 
 
+
+/*IF-ELSE y FOREACH, suma, resta,multiplicacion y division
+
+class operacionesMatematicas
+{
+	public function metodo($operacion,$numeros)
+	{
+		$resultado = 0;
+		$caja = count($numeros);
+		if ($operacion == "suma") {					
+			foreach ($numeros as $key) {
+				$resultado += $key;
+			}			
+		}elseif ($operacion == "resta") {
+			foreach ($numeros as $key) {
+				$resultado -= $key;
+			}
+		}elseif ($operacion == "multiplicacion") {
+			$resultado = $numeros[0];
+			foreach ($numeros as $key) {
+				$resultado = $resultado * $key;
+			}
+		}elseif ($operacion == "division") {
+			$resultado = $numeros[0];
+			foreach ($numeros as $key) {
+				$resultado = $resultado / $key;
+			}
+		}else{
+			echo "Esa operacion no existe";
+		}
+		return $resultado;
+	}
+}
+
+$numeros = array(1,2,3,4,5);
+$objeto = new operacionesMatematicas();
+echo $objeto->metodo("division",$numeros);
+
+*/
+
+/* SWITCH y FOREACH con arreglo asociativo , suma, resta, multiplicacion y division
+
+
+class operacionesMatematicas
+{
+	public function metodo($operacion,$numeros)
+	{
+		$resultado = 0;
+		switch ($operacion) {
+			case 'suma':
+				foreach ($numeros as $key => $value) {
+					$resultado += $value;
+				}
+				break;
+
+			case 'resta':
+				foreach ($numeros as $key => $value) {
+					$resultado -= $value;
+				}
+				break;		
+
+			case 'multiplicacion':
+				$resultado = $numeros["uno"];
+				foreach ($numeros as $key => $value) {
+					$resultado *= $value;
+				}
+				break;	
+
+			case 'division':
+				$resultado = $numeros["uno"];
+				foreach ($numeros as $key => $value) {
+					$resultado /= $value;
+				}
+				break;			
+		}
+		return $resultado;
+	}
+}
+
+$numeros = array("uno" => 1,"dos" => 2,"tres" => 3,"cuatro" => 4);
+$objeto = new operacionesMatematicas();
+echo $objeto->metodo("division",$numeros);
+
+
+*/
 
 
 
@@ -403,12 +548,12 @@ $objeto->razonar();
 /*
 TAREAS
 1)hacer un objeto que herede algo LISTO
-2)Hacer un objeto que herede un metodo privado  LISTO
+2)Hacer un objeto que herede un metodo privado LISTO  
 3)Hacer un objeto que herede otra clase ya heredada LISTO
 4)Hcaer un objeto que herede un metodo protegido LISTO
 5)Hacer un objeto que utilice parent:: LISTO
 6)Utilizar una clase usando STATIC LISTO
-7)hacer una clase que sume, reste, multiplique y divida LISTO
+7)hacer una clase que sume, reste, multiplique y divida  
 8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo LISTO
 9)Hacer un arreglo asociativo LISTO
 10)Hacer suma,resta,multiplicación y división usando IF-ELSE LISTO
@@ -417,17 +562,20 @@ TAREAS
 
 
 PARTE 2
-12)Hacer un objeto que imprima un metodo que use el IF CORTO, que compare país y muestre su divisa LISTO
-13)Hacer un objeto que imprima un metodo que use el IF CORTO, que compare mayoría de edad LISTO 
+12)use el IF CORTO, que compare país y muestre su divisa LISTO
+13) use el IF CORTO, que compare mayoría de edad  LISTO
 
 
-14)Ejemplificar un FOR
-15)Hacer un ciclo con foreach LISTO
-16)Implementar el FOREACH en las 4 operaciones(suma, resta, multiplicación y division) LISTO
-17)Sumar, restar, multiplicar y dividir un array con FOR y SWITCH LISTO
-18)Hacer un bucle con WHILE
-19)Hacer un bucle con DO-WHILE
-20)
+14)Ejemplificar un FOR LISTO
+15)Hacer un ciclo con foreach LISTO 
+
+16)Implementar el FOREACH e IF-ELSE en las 4 operaciones(suma, resta, multiplicación y division) LISTO
+17Implementar el FOREACH y SWITCH en las 4 operaciones(suma, resta, multiplicación y division) con un ARREGLO ASOCIATIVO LISTO
+
+18)Sumar, restar, multiplicar y dividir un array con FOR y SWITCH 
+19)Hacer un bucle con WHILE
+20)Hacer un bucle con DO-WHILE
+21)
 
 */
 
