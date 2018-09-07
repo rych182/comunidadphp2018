@@ -1,42 +1,18 @@
 <?php 
 
-class operacionesMatematicas
+class guail
 {
-	public function metodo($operacion,$numeros)
+	public function ciclo()
 	{
-			$caja = count($numeros);
-			$resultado = 0;
-		switch ($operacion) {
-			case 'suma':
-				for ($i=0; $i < $caja; $i++) {
-					$resultado += $numeros[$i]; 
-				}
-				break;
-			case 'resta':
-				for ($i=0; $i < $caja; $i++) {
-					$resultado -= $numeros[$i]; 
-				}
-				break;
-			case 'multiplicacion':
-				$resultado = $numeros[0];
-				for ($i=0; $i < $caja; $i++) {
-					$resultado *= $numeros[$i];
-				}
-				break;
-			case 'division':
-				$resultado = $numeros[0];
-				for ($i=0; $i < $caja; $i++) {
-					$resultado /= $numeros[$i];
-				}
-				break;
-		}
-		return $resultado;
+		$numero = 1;
+		do {
+			echo $numero . "<br>";
+			$numero++;
+		} while ($numero < 10);
 	}
 }
-
-$numeros = array(1,2,3,4);
-$objeto = new operacionesMatematicas();
-echo $objeto->metodo("division",$numeros);
+$objeto = new guail();
+$objeto->ciclo();
 
 
 
@@ -49,17 +25,47 @@ echo $objeto->metodo("division",$numeros);
 
 
 
+/*EJERCICIO CON DO-WHILE
+
+class guail
+{
+	public function ciclo()
+	{
+		$numero = 1;
+		do {
+			echo $numero . "<br>";
+			$numero++;
+		} while ($numero < 10);
+	}
+}
+$objeto = new guail();
+$objeto->ciclo();
 
 
 
+*/
 
 
 
+/*EJERCICIO CON WHILE
+
+class guail
+{
+	public function ciclo()
+	{
+		$numero = 1;
+		while ($numero < 5) {
+			echo $numero . "<br>";
+			$numero++;
+		}
+
+	}
+}
+$objeto = new guail();
+$objeto->ciclo();
 
 
-
-
-
+*/
 
 /*
 FOREACH con array ASOCIATIIVO
@@ -547,17 +553,17 @@ $objeto->razonar();
 
 /*
 TAREAS
-1)hacer un objeto que herede algo LISTO
-2)Hacer un objeto que herede un metodo privado LISTO  
-3)Hacer un objeto que herede otra clase ya heredada LISTO
-4)Hcaer un objeto que herede un metodo protegido LISTO
-5)Hacer un objeto que utilice parent:: LISTO
-6)Utilizar una clase usando STATIC LISTO
+1)hacer un objeto que herede algo 
+2)Hacer un objeto que herede un metodo privado   
+3)Hacer un objeto que herede otra clase ya heredada 
+4)Hcaer un objeto que herede un metodo protegido 
+5)Hacer un objeto que utilice parent:: 
+6)Utilizar una clase usando STATIC 
 7)hacer una clase que sume, reste, multiplique y divida  
-8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo LISTO
-9)Hacer un arreglo asociativo LISTO
-10)Hacer suma,resta,multiplicación y división usando IF-ELSE LISTO
-11)Hacer suma,resta,multiplicación y división usando SWITCH-CASE-BREAK LISTO
+8)Sumar, restar, multiplicar y dividir, los valores de un array fuera de una clase, con un metodo 
+9)Hacer un arreglo asociativo 
+10)Hacer suma,resta,multiplicación y división usando IF-ELSE 
+11)Hacer suma,resta,multiplicación y división usando SWITCH-CASE-BREAK 
 
 
 
@@ -567,12 +573,12 @@ PARTE 2
 
 
 14)Ejemplificar un FOR LISTO
-15)Hacer un ciclo con foreach LISTO 
+15)Hacer un ciclo con foreach LISTO   
 
 16)Implementar el FOREACH e IF-ELSE en las 4 operaciones(suma, resta, multiplicación y division) LISTO
 17Implementar el FOREACH y SWITCH en las 4 operaciones(suma, resta, multiplicación y division) con un ARREGLO ASOCIATIVO LISTO
 
-18)Sumar, restar, multiplicar y dividir un array con FOR y SWITCH 
+18)Sumar, restar, multiplicar y dividir un array con FOR y SWITCH LISTO
 19)Hacer un bucle con WHILE
 20)Hacer un bucle con DO-WHILE
 21)
