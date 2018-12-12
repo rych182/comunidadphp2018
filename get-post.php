@@ -12,7 +12,7 @@
 	<div>
 		Esto es una página para formulario de html con PHP
 	</div>
-	<form action="recibir.php?edad=23" method="POST">
+	<form action="recibir.php" method="POST">
 		Nombre: <input type="text" name="nombreformulario" id="idnombreformulario">
 		<br>
 		<input type="submit" value="Enviar">
@@ -21,6 +21,9 @@
 	name es el nombre generico al componente que trabajas y puede repetirse en cualquier otro elemento.
 
 	id: el identificador ÚNICO que nos sirve para el DOM
+
+	El truquito para enviar datos por post a get en recibir.php
+	<form action="recibir.php?edad=23" method="POST">
 -->
 </body>
 </html>
