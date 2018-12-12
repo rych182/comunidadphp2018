@@ -1,44 +1,45 @@
 <?php
-
 //GRACIAS DIOS POR MOSTRARME LOS ERRORES
-class operacionesMatematicas
+
+class alvi
 {
-	public $nombreObjeto ="";
-
-	public function __call($nombreMetodo,$argumentos)
+	function __set($var1,$var2)
 	{
-		//echo gettype($argumentos);
-		if ($nombreMetodo == "suma") {
-			$resultado = 1+1;
-			echo "El resultado de la suma es: $resultado";
-		}elseif ($nombreMetodo == "resta") {
-			$resultado = 6-1;
-			echo "El resultado de la resta es: $resultado";
-		}
-		//el metodo call se ejecuta en el instante en que llamas a un metodo que no es accesible o no existe
+		echo $var1 . "<br>";
 	}
-
-	public function __get($nombrePropiedad)
-	{
-		echo "Tu estás intentando extraer el valor de la propiedad 'edad', <br>
-		debes utilizar el metodo llamada 'obtenerEdad' <br>";
-		//Esto se utiliza como metodo de sobre carga de propiedades, para decir que se puede o no hacer
-		// y como hacerlo
-	}
-
-	public function __set($nombre, $valor)
-	{
-		echo "Nombre: $nombre y valor: $valor";
-		//aquí estoy intentando asignarle a la propiedad 'edad' el valor del número 4
-		//se pueden hacer infinidad de reglas que vamos a verificar que se estén ejecutandosu sistema
-		//de manera correcta
-	}
-
 }
-$objeto1 = new operacionesMatematicas("1");
-//$objeto1->resta();
-//echo "La edad es: " . $objeto1->edad;
-$objeto1->edad=4;
+$objeto1 = new alvi();
+echo $objeto1->metodo="Hola mama";
+// TARDE 13MIN, practicarlo 1,2,3,4,5 para hacerlo 3 veces mas rápido
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Esto sirve para poner reglas indicando que "una variable no existe", "Esta propiedad no se puede utilizar"
@@ -48,8 +49,25 @@ $objeto1->edad=4;
 
 
 
-/*METODO MÁGICO GET
 
+
+/*METODO SET
+	public function __set($nombre, $valor)
+	{
+		echo "Nombre: $nombre y valor: $valor";
+		//aquí estoy intentando asignarle a la propiedad 'edad' el valor del número 4
+		//se pueden hacer infinidad de reglas que vamos a verificar que se estén ejecutandosu sistema
+		//de manera correcta
+	}
+$objeto1 = new operacionesMatematicas("1");
+$objeto1->edad=4;
+
+*/
+
+
+
+/*METODO MÁGICO GET
+//Se imprimira primero $objeto1->edad
 	public function __get($nombrePropiedad)
 	{
 		echo "Tu estás intentando extraer el valor de la propiedad 'edad', <br>

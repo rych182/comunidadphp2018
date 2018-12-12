@@ -1,5 +1,59 @@
 <?php
 
+class ejemplo
+{
+	public function metodo($var)
+	{
+		echo $var."<br>";	
+	}
+	public function titulo1()
+	{
+		echo "<h1>";
+	}
+	public function titulo2()
+	{
+		echo "</h1>";
+	}
+	public function parrafo1()
+	{
+		echo "<p>";
+	}
+	public function parrafo2()
+	{
+		echo "</p>";
+	}
+
+
+}
+$objeto1 = new ejemplo();
+$objeto2 = new ejemplo();
+$objeto3 = new ejemplo();
+$objeto4 = new ejemplo();
+$objeto5 = new ejemplo();
+
+$objeto1->titulo1();
+$objeto1->metodo("Ricardo");
+$objeto1->titulo2();
+
+$objeto1->parrafo1();
+$objeto2->metodo("Roberto");
+$objeto1->parrafo2();
+
+$objeto1->titulo1();
+$objeto3->metodo("Raul");
+$objeto1->titulo2();
+
+$objeto1->parrafo1();
+$objeto4->metodo("David");
+$objeto1->parrafo2();
+
+$objeto1->titulo1();
+$objeto5->metodo("Salomon");
+$objeto1->titulo2();
+
+
+
+
 
 
 
@@ -128,13 +182,13 @@ $objeto->metodo();
 */
 
 //**********COSAS POR PRACTICAS******************
-//1)Objeto con constructor y metele un valor con una variable LISTO
+//1)Objeto con constructor y metele un valor con una variable  LISTO
 //2)PROPIEDAD modificada desde afuera del objeto LISTO
 //3)Cambiando mi apodo cuando está protegido LISTO
 //4)Imprimiendo un objeto con 2 métodos públicos, uno inserta un valor a una PROPIEDAD PRIVADA, uno declara y el otro muestra. LISTO
-//5)Cambiar PROPIEDAD PRIVADA desde afuera con una variable variable dentro de los parentesis del metodo LISTO
+//5)Cambiar PROPIEDAD PRIVADA desde afuera con una variable dentro de los parentesis del metodo LISTO
 //6)Hacer 5 objetos con una misma clase, y que cada objeto me muestr un nombre distinto LISTO
-//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa.  LISTO
+//7)Crear un objeto con una clase que dentro tenga metodos con etiquetas html y modifiques un segundo objeto que imprima cualquier cosa.LISTO     
 
 //TARDE 21MIN, esto es el máximo
 
